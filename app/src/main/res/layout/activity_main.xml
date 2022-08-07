@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="30dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        >
+
+        <TextView
+            android:id="@+id/text_password_result"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:textSize="25sp"
+            android:text="Click on Generate"/>
+
+        <Button
+            android:id="@+id/btn_copy"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Copy"/>
+
+        <LinearLayout
+            android:layout_marginTop="30dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:text="Select Password Content"
+                android:layout_marginBottom="20dp"
+                android:textSize="18sp"/>
+
+            <CheckBox
+                android:id="@+id/check_lower"
+                android:checked="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Lower Case"/>
+
+            <CheckBox
+                android:id="@+id/check_upper"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Upper Case"/>
+
+            <CheckBox
+                android:id="@+id/check_numeric"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Numeric Value"/>
+
+            <CheckBox
+                android:id="@+id/check_special_char"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Special Chars"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="20dp"
+                >
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:textSize="16sp"
+                    android:text="Password Size"/>
+
+                <EditText
+                    android:id="@+id/edit_pwd_size"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="0.5"
+                    android:hint="Password size"
+                    android:inputType="numberDecimal"
+                    android:text="8"
+                    android:textAlignment="center"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/text_error"
+                android:layout_marginTop="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="43dp"
+                android:textSize="20sp"
+                android:gravity="center"
+                android:fontFamily="sans-serif"
+                android:textColor="@color/red_danger"
+                />
+
+            <Button
+                android:id="@+id/btn_generate"
+                android:layout_marginTop="30dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Generate"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
